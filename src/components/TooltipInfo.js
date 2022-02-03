@@ -3,7 +3,7 @@ import 'styles/TooltipInfo.scss';
 
 export default function TooltipInfo({product, id}) {
   return (
-    <span className={id === product.productId ? 'tooltip' : 'hide'}>
+    <span className='tooltip'>
       <div className='tooltip-image' style={{backgroundImage: `url(${product.imageUrl})`}}></div>
       <div className='description'>
         <span className='tooltip-name'>{product.productName}</span>
