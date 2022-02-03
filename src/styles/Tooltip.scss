@@ -1,0 +1,10 @@
+.button-wrapper {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  > img {
+    width: 32px;
+    height: 32px;
+  }
+}
