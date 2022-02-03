@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+## 집 소개 페이지 제작 (개인 과제)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 배포 주소 : https://home-introduction.netlify.app/
 
-## Available Scripts
+### 설치 및 시작 방법
 
-In the project directory, you can run:
+    npm install
+    npm start
 
-### `npm start`
+### 프로젝트 구조
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+src  
+ ┣ components  
+ ┃ ┣ ProductImage.js  
+ ┃ ┣ Tooltip.js  
+ ┃ ┗ TooltipInfo.js  
+ ┣ hooks  
+ ┃ ┗ useFetch.js  
+ ┣ pages  
+ ┃ ┗ contents  
+ ┃ ┃ ┗ HomeIntroduction.js  
+ ┣ styles  
+ ┃ ┣ GlobalStyle.scss  
+ ┃ ┣ HomeIntroduction.scss  
+ ┃ ┣ ProductImage.scss  
+ ┃ ┣ Tooltip.scss  
+ ┃ ┗ TooltipInfo.scss  
+ ┣ App.js  
+ ┗ index.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 기능
 
-### `npm test`
+- 필요한 사진과 가구에 대한 정보는 API를 통해 데이터를 받아서 사용하였다.
+- 집 내부 이미지에서 각각의 가구의 위치에 맞게 돋보기 버튼이 이미지 위에 위치되어 있어야 한다.
+- 돋보기 버튼을 클릭하면 가구의 정보에 대한 tooltip이 보여진다.
+- tooltip이 하나 보여지고 있는 상태에서 다른 가구의 돋보기 버튼을 클릭하면 기존에 보여지고 있던 tooltip은 닫히고, 새로 클릭한 가구의 tooltip을 보여준다.
+- 하단에는 상품 목록을 구현했으며, 하단의 가구가 클릭되어 선택되었으면 이미지에서 해당 가구의 tooltip을 보여주어야한다.
+- 가구의 정보에서 할인율이 존재하는 경우에는 할인율도 표시해주어야한다. (입점된 가구는 할인율을 포함해서, 비입점 가구는 예상가를 표기)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### custom hook (useFetch)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    API fetch의 경우는 custom hook으로 따로 만들어 hook을 이용하여 데이터를 가져올 수 있도록 하였다.
