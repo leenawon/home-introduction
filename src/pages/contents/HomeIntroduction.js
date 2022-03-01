@@ -5,7 +5,7 @@ import ProductImage from 'components/ProductImage';
 import 'styles/HomeIntroduction.scss';
 
 export default function HomeIntroduction() {
-  const data = useFetch('https://cdn.ggumim.co.kr/test/image_product_link.json');
+  const data = useFetch(process.env.REACT_APP_API_URL);
   const productList = data.productList;
   const [id, setId] = useState(0);
 
