@@ -1,5 +1,5 @@
 import HomeIntroduction from 'pages/contents/HomeIntroduction';
-import 'styles/GlobalStyle.scss';
+import 'styles/Reset.scss';
 
 function App() {
   return (
