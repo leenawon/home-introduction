@@ -15,7 +15,7 @@ export default function ToolTip({product, id, setId}) {
         <img src='https://cdn.ggumim.co.kr/storage/20211029145238AlZrQ41xtg.png' alt='돋보기 버튼' />
       }
       {id === product.productId && (
-        <TooltipInfo product={product} id={id} />
+        <TooltipInfo product={product} />
         )
       }
     </div>

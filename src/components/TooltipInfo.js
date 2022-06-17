@@ -1,7 +1,7 @@
 import React from 'react';
 import 'styles/TooltipInfo.scss';
 
-export default function TooltipInfo({product, id}) {
+export default function TooltipInfo({product}) {
   return (
     <span className='tooltip'>
       <div className='tooltip-image' style={{backgroundImage: `url(${product.imageUrl})`}}></div>
